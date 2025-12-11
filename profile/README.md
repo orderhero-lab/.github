@@ -1,6 +1,6 @@
 # Welcome to Delivery Lab Organization!
 
-## Git flow 전력
+## Git flow 전략
 
 ### 1. main ← dev 병합 금지
 `dev 브랜치를 main 브랜치에 절대 merge하지 않는다.`  
