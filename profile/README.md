@@ -1,14 +1,12 @@
 # Welcome to Delivery Lab Organization!
 
----
-
 ## Git Flow Strategy
 
 본 문서는 OrderHero 개발 조직이 사용하기 위한 **표준 Git Flow 전략**을 정의한다.  
 핵심 목표는 **main 브랜치의 절대적 안정성**, **개발 브랜치(dev)의 통합 관리**,  
 그리고 **기능별(feature) 개발의 독립성 보장**이다.
 
-## 🔥 핵심 원칙
+## 핵심 원칙
 
 ### 1. main ← dev 병합 금지
 `dev 브랜치를 main 브랜치에 절대 merge하지 않는다.`  
