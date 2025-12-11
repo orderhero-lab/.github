@@ -32,6 +32,9 @@ git checkout -b feature/your-task
 * hotfix/* 브랜치는 main에서 생성
 * main에 squash merge 후 dev에 rebase merge로 반영
 
+### etc
+* ~~그뚜알~~
+
 ---
 
 ## 초기 설정
