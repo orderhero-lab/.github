@@ -24,19 +24,19 @@ git checkout -b feature/your-task
 ### 3. dev ← 작업 브랜치 : Rebase Merge 권장
 
 통합 테스트 및 QA를 위해 dev에 병합할 때는 rebase merge를 사용한다.
-•	feature 브랜치의 실제 commit history 유지
-•	dev에서 충돌을 빠르게 발견하고 조정
-•	dev를 기능 통합 환경으로 유지
+* feature 브랜치의 실제 commit history 유지
+* dev에서 충돌을 빠르게 발견하고 조정
+* dev를 기능 통합 환경으로 유지
 
 ### 4. main ← 작업 브랜치 : Squash Merge 권장
 배포 브랜치(main)는 기능별 1 commit 형태로 정리한다.
-•	main 브랜치는 항상 깔끔한 이력 유지
-•	기능 단위로 rollback 용이
-•	불필요한 세부 commit이 main에 누적되지 않음
+* main 브랜치는 항상 깔끔한 이력 유지
+* 기능 단위로 rollback 용이
+* 불필요한 세부 commit이 main에 누적되지 않음
 
 ### Hotfix 전략
-	•	hotfix/* 브랜치는 main에서 생성
-	•	main에 squash merge 후 dev에 rebase merge로 반영
+* hotfix/* 브랜치는 main에서 생성
+* main에 squash merge 후 dev에 rebase merge로 반영
 
 ---
 
