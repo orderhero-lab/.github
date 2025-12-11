@@ -1,4 +1,4 @@
-# Welcome Delivery Lab Organization!
+# Welcome to Delivery Lab Organization!
 
 ## 초기 설정
 * 자신의 계정 Profile -> settings -> Developer Settings -> Personal access token(PAT) -> Token(classic)
