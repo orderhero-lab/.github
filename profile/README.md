@@ -18,16 +18,16 @@ git checkout -b feature/your-task
 
 ### 4. stg ← dev 병합 금지
 
-### 3. dev ← 작업 브랜치 : Merge
+### 5. dev ← 작업 브랜치 : Merge
 
 지속적인 배포를 위해 Merge를 허용한다.
 
-### 4. stg ← 작업 브랜치 : Rebase Merge
+### 6. stg ← 작업 브랜치 : Rebase Merge
 통합 테스트 및 원할한 QA를 위해 Rebase Merge를 권장
 * commit history 유지
 * 이력 정리 필요
 
-### 5. main ← 작업 브랜치 : Squash Merge 권장
+### 7. main ← 작업 브랜치 : Squash Merge 권장
 배포 브랜치(main)는 기능별 1 commit 형태로 정리한다.
 * main 브랜치는 항상 깔끔한 이력 유지
 * 기능 단위로 rollback 용이
@@ -36,6 +36,10 @@ git checkout -b feature/your-task
 ### Hotfix 전략
 * hotfix/* 브랜치는 main에서 생성
 * main에 squash merge 후 dev에 rebase merge로 반영
+* hotfix → main (squash) → stg (rebase) → dev (rebase or merge)
+
+### 주기적인 최신화
+main과 dev/stg의 정합성을 위해 dev와 stg에서 main 브랜치를 주기적으로 pull 하는것을 권장
 
 ### etc
 * ~~그뚜알~~
