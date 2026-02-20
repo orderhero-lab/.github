@@ -9,20 +9,26 @@ main은 오직 검증 완료된 작업 브랜치만 merge될 수 있다.
 ### 2. 작업 브랜치는 main 브랜치에서 생성
 새로운 기능/수정 작업은 항상 다음과 같이 시작한다:
 
+### 3. main ← stg 병합 금지
+
+### 4. stg ← dev 병합 금지
+
 ```bash
 git checkout main
 git pull
 git checkout -b feature/your-task
 ```
 
-### 3. dev ← 작업 브랜치 : Rebase Merge 권장
+### 3. dev ← 작업 브랜치 : Merge
 
-통합 테스트 및 QA를 위해 dev에 병합할 때는 rebase merge를 사용한다.
-* feature 브랜치의 실제 commit history 유지
-* dev에서 충돌을 빠르게 발견하고 조정
-* dev를 기능 통합 환경으로 유지
+지속적인 배포를 위해 Merge를 허용한다.
 
-### 4. main ← 작업 브랜치 : Squash Merge 권장
+### 4. stg ← 작업 브랜치 : Rebase Merge
+통합 테스트 및 원할한 QA를 위해 Rebase Merge를 권장
+* commit history 유지
+* 이력 정리 필요
+
+### 5. main ← 작업 브랜치 : Squash Merge 권장
 배포 브랜치(main)는 기능별 1 commit 형태로 정리한다.
 * main 브랜치는 항상 깔끔한 이력 유지
 * 기능 단위로 rollback 용이
