@@ -8,16 +8,15 @@ main은 오직 검증 완료된 작업 브랜치만 merge될 수 있다.
 
 ### 2. 작업 브랜치는 main 브랜치에서 생성
 새로운 기능/수정 작업은 항상 다음과 같이 시작한다:
-
-### 3. main ← stg 병합 금지
-
-### 4. stg ← dev 병합 금지
-
 ```bash
 git checkout main
 git pull
 git checkout -b feature/your-task
 ```
+
+### 3. main ← stg 병합 금지
+
+### 4. stg ← dev 병합 금지
 
 ### 3. dev ← 작업 브랜치 : Merge
 
